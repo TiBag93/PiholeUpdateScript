@@ -10,17 +10,16 @@ RED='\033[1;31m'
 # The directory where your Webservers pihole should be stored
 webroot="/webroot/pi"
 
-# The User who owns the /admin folder of piholes webpage
-adminUser="pihole:pihole"
-
-# The User who owns the /pihole folder of piholes webpage
-piholeUser="www-data:root"
-
 # The default directory, where pihole installs the webpage by default
 defaultWebroot="/var/www/html"
 
 # Set a reboot flag after installation options: true | false default: true
 reboot=true
+
+############################################################################
+############################################################################
+############################################################################
+############################################################################
 
 if ! [ $(id -u) = 0 ]; then
    echo -e "$RED The script need to be run as root." >&2
@@ -77,18 +76,15 @@ while ps -p $BACK_PID > /dev/null; do sleep 1;done
 #       echo "$REDA timeout occoured. Maybe Pi-Hole is not available or your internet connection got lost."$NORMAL
 #       fi
 
-
 #Cleaning up
-
 echo -e "$NORMAL Cleaning up.."
 rm /tmp/basic-install.sh
-if [ "$reboot" = "true" ]; then
-        echo -e "$GREEN Pihole successfully updated. Restarting in 3 seconds."
+if [ $reboot = "true" ]; then
+        echo -e "$GREEN Pihole successfully updated. Restarting in 3 seconds.$NORMAL"
         sleep 3
         reboot
-        done
 else
         echo -e "$GREEN Pihole successfully updated. No restart was forced.$NORMAL"
         sleep 3
-        exit 1
+fi
 exit 1

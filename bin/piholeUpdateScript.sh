@@ -43,8 +43,6 @@ echo -e "$NORMAL PiHole update script written by$GREEN TiBag93\n\n"
 
 echo -e "$NORMAL Choosen settings: \n"
 echo -e "$NORMAL \t Your webroot: \t\t\t" $BLUE $webroot $NORMAL
-echo -e "$NORMAL \t Your Webadmin User + Group: \t" $BLUE $adminUser $NORMAL
-echo -e "$NORMAL \t Your Pihole User + Group: \t" $BLUE $piholeUser $NORMAL
 echo -e "$NORMAL \t Default root: \t\t\t" $BLUE $defaultWebroot $NORMAL
 echo -e "$NORMAL \t Reboot after installation: \t" $GREEN $reboot $NORMAL
 echo -e "$NORMAL \n Sleeping for 3 seconds to check the settings\n Press Ctrl + C to abbort.." $NORMAL
@@ -81,10 +79,12 @@ echo -e "$NORMAL Cleaning up.."
 rm /tmp/basic-install.sh
 if [ $reboot = "true" ]; then
         echo -e "$GREEN Pihole successfully updated. Restarting in 3 seconds.$NORMAL"
+        echo -e "$NORMAL PiHole update script written by$GREEN TiBag93\n\n"
         sleep 3
         reboot
 else
         echo -e "$GREEN Pihole successfully updated. No restart was forced.$NORMAL"
+        echo -e "$NORMAL PiHole update script written by$GREEN TiBag93\n\n"
         sleep 3
 fi
 exit 1

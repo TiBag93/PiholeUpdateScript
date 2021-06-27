@@ -79,12 +79,10 @@ echo -e "$NORMAL Cleaning up.."
 rm /tmp/basic-install.sh
 if [ $reboot = "true" ]; then
         echo -e "$GREEN Pihole successfully updated. Restarting in 3 seconds.$NORMAL"
-        echo -e "$NORMAL PiHole update script written by$GREEN TiBag93\n\n"
         sleep 3
         reboot
 else
         echo -e "$GREEN Pihole successfully updated. No restart was forced.$NORMAL"
-        echo -e "$NORMAL PiHole update script written by$GREEN TiBag93\n\n"
         sleep 3
 fi
 exit 1

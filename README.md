@@ -1,4 +1,4 @@
-# PiholeUpdateScript v0.1 by TiBag93
+# PiholeUpdateScript by TiBag93
 A simple bash script to force an update directly from pihole's official site without the need of editing paths everytime (When you dont store your Webdata in the /var/www/html)
 Ive only tested this script on my Ubuntu on a Raspberry Pi 4 4GB
 

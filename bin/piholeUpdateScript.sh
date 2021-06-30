@@ -77,11 +77,13 @@ while ps -p $BACK_PID > /dev/null; do sleep 1;done
 #Cleaning up
 echo -e "$NORMAL Cleaning up.."
 rm /tmp/basic-install.sh
+
+# Force Reboot after installation
 if [ $reboot = "true" ]; then
         echo -e "$GREEN Pihole successfully updated. Restarting in 3 seconds.$NORMAL"
         sleep 3
         reboot
-else
+elif [ $reboot = "false" ]; then
         echo -e "$GREEN Pihole successfully updated. No restart was forced.$NORMAL"
         sleep 3
 fi

@@ -9,7 +9,7 @@ RED='\033[0;31m'
 #Gaining space for the Output;
 clear
 
-echo -e "$NORMAL Nessus Startup Script for WSL Maschines written by$GREEN TiBag93\n\n"
+echo -e "$NORMAL Nessus Startup Script for WSL Maschines written by$GREEN Timo Baginski\n\n"
 
 #check permissions
 if ! [ $(id -u) = 0 ]; then

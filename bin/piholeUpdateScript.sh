@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Defining some colors
-NORMAL='\033[0;39m'
+NORMAL='\033[0;37m'
 BLUE='\033[1;34m'
 GREEN='\033[1;32m'
-RED='\033[1;31m'
+RED='\033[0;31m'
 
 
 # The directory where your Webservers pihole should be stored
@@ -59,7 +59,7 @@ sleep 3
 # Downloading the latest pihole version
 echo "$GREEN Trying to download the latest version of PiHole.."
 
-wget -O /tmp/basic-install.sh https://install.pi-hole.net
+wget -O basic-install.sh https://install.pi-hole.net
 
 sed -i 's|webroot="/var/www/html"|webroot="/webroot/pi"|g' /tmp/basic-install.sh
 sleep 3

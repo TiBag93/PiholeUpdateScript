@@ -34,7 +34,7 @@ fi
 
 # Gaining space to show the settings |||| instead of the for loop we can just clear the screen..
 clear
-echo -e "$NORMAL PiHole update script written by$GREEN TiBag93\n\n"
+echo -e "$NORMAL PiHole update script written by$GREEN Timo Baginski\n\n"
 
 #for i in {1..50}
 #do
